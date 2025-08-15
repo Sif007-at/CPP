@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    // 3D array of strings: [Class][Row][Seat]
+    string students[2][2][2];
+
+    // Input values
+    for (int c = 0; c < 2; c++) {
+        for (int r = 0; r < 2; r++) {
+            for (int s = 0; s < 2; s++) {
+                cout << "Enter name for Class " << c + 1
+                     << ", Row " << r + 1
+                     << ", Seat " << s + 1 << ": ";
+                cin >> students[c][r][s];
+            }
+        }
+    }
+
+    cout << "\n--- Student Seating Info ---\n";
+
+    // Output values
+    for (int c = 0; c < 2; c++) {
+        for (int r = 0; r < 2; r++) {
+            for (int s = 0; s < 2; s++) {
+                cout << "Class " << c + 1
+                     << ", Row " << r + 1
+                     << ", Seat " << s + 1
+                     << " -> " << students[c][r][s] << endl;
+            }
+        }
+    }
+
+    return 0;
+}
